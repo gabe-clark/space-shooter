@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bdu6wgsjwgffp" path="res://SpaceShooterRedux/PNG/Effects/star1.png" id="4_j8arr"]
 [ext_resource type="Texture2D" uid="uid://dw1aaykdb8cga" path="res://SpaceShooterRedux/PNG/Effects/star2.png" id="5_6q0ru"]
 [ext_resource type="Texture2D" uid="uid://daitmnrxvetaj" path="res://SpaceShooterRedux/PNG/Effects/star3.png" id="6_01d7u"]
-[ext_resource type="PackedScene" uid="uid://cmahe7psi6eob" path="res://ui.tscn" id="7_yabia"]
+[ext_resource type="PackedScene" uid="uid://cy4jhx54sfjdw" path="res://ui.tscn" id="7_yabia"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_jidh2"]
 animations = [{
