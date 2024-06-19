@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://b5oxm0jlkmcgt"]
+
+[ext_resource type="Script" path="res://scenes/meteor.gd" id="1_t1qpc"]
+[ext_resource type="AudioStream" uid="uid://bwir8uyftsm7" path="res://SpaceShooterRedux/Bonus/sfx_zap.ogg" id="2_7qlnn"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_c550g"]
+radius = 48.0104
+
+[node name="Meteor" type="Area2D"]
+collision_layer = 2
+collision_mask = 9
+script = ExtResource("1_t1qpc")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_c550g")
+
+[node name="ExplosionSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_7qlnn")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

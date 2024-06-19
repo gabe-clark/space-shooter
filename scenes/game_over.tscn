@@ -1,0 +1,70 @@
+[gd_scene load_steps=4 format=3 uid="uid://concere016xkx"]
+
+[ext_resource type="Script" path="res://scenes/game_over.gd" id="1_3n4rv"]
+[ext_resource type="FontFile" uid="uid://ctxsuxx6nst1m" path="res://SpaceShooterRedux/Bonus/kenvector_future.ttf" id="1_iwmg8"]
+[ext_resource type="PackedScene" uid="uid://d3rofqxou00eo" path="res://scenes/level.tscn" id="2_uyfll"]
+
+[node name="GameOver" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3n4rv")
+level_scene = ExtResource("2_uyfll")
+
+[node name="BG" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.41213, 0.515152, 0.654795, 1)
+metadata/_edit_lock_ = true
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("1_iwmg8")
+theme_override_font_sizes/font_size = 75
+text = "GAME OVER"
+
+[node name="ScoreLabel" type="Label" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("1_iwmg8")
+theme_override_font_sizes/font_size = 25
+text = "Score: "
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -40.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/margin_bottom = 20
+
+[node name="Label" type="Label" parent="MarginContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_iwmg8")
+theme_override_font_sizes/font_size = 15
+text = "Press space to start again"

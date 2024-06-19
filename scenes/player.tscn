@@ -1,0 +1,55 @@
+[gd_scene load_steps=8 format=3 uid="uid://i1lmuu0kknrw"]
+
+[ext_resource type="Script" path="res://scenes/player.gd" id="1_dc5xj"]
+[ext_resource type="Texture2D" uid="uid://cbbvbvron680j" path="res://SpaceShooterRedux/PNG/playerShip1_red.png" id="1_ol6p7"]
+[ext_resource type="AudioStream" uid="uid://w42eg5ouerg6" path="res://SpaceShooterRedux/Bonus/sfx_laser1.ogg" id="3_l3ksw"]
+[ext_resource type="AudioStream" uid="uid://bwir8uyftsm7" path="res://SpaceShooterRedux/Bonus/sfx_zap.ogg" id="4_l7aeh"]
+
+[sub_resource type="Gradient" id="Gradient_tnqxh"]
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_mrnc1"]
+gradient = SubResource("Gradient_tnqxh")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_is28k"]
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 13.16
+gravity = Vector3(2.08165e-12, 20, 2.08165e-12)
+scale_min = 16.1
+scale_max = 16.1
+color = Color(0.294118, 1, 1, 1)
+color_ramp = SubResource("GradientTexture1D_mrnc1")
+
+[node name="Player" type="CharacterBody2D"]
+collision_mask = 6
+script = ExtResource("1_dc5xj")
+speed = 800
+
+[node name="0_4" type="GPUParticles2D" parent="."]
+position = Vector2(0, 40)
+process_material = SubResource("ParticleProcessMaterial_is28k")
+lifetime = 0.4
+
+[node name="PlayerImage" type="Sprite2D" parent="."]
+texture = ExtResource("1_ol6p7")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-9, -37, 8, -37, 12, -13, 36, 3, 47, -6, 47, 24, 7, 38, -7, 39, -46, 22, -48, -7, -35, 2, -12, -12)
+
+[node name="LaserStartPosition" type="Marker2D" parent="."]
+position = Vector2(0, -58)
+
+[node name="LaserTimer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[node name="LaserSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_l3ksw")
+
+[node name="DamageSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_l7aeh")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+enabled = false
+
+[connection signal="timeout" from="LaserTimer" to="." method="_on_laser_timer_timeout"]
