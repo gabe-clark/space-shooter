@@ -26,3 +26,8 @@ func _process(delta):
 	# add movement to the meteors
 	position += Vector2(direction_x, 1.0) * speed * delta
 	rotation_degrees += rotation_speed * delta 
+
+func _on_body_entered(body):
+	collision.emit()
+	queue_free()
+

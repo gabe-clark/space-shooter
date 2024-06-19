@@ -45,7 +45,8 @@ func _on_bonus_score_timer_timeout():
 	bonus_score.connect("collision", _on_bonus_score_collision)
 
 func _on_bonus_score_collision():
-	$UI/ScoreTimer.wait_time += 100
+	print("Bonus score collision")
+	Global.score += 10
 
 func _on_meteor_collision():
 	health -= 1
