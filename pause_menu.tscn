@@ -1,0 +1,50 @@
+[gd_scene load_steps=4 format=3 uid="uid://bmxqx7aoscepf"]
+
+[ext_resource type="FontFile" uid="uid://ctxsuxx6nst1m" path="res://SpaceShooterRedux/Bonus/kenvector_future.ttf" id="1_0142n"]
+[ext_resource type="PackedScene" uid="uid://dpapxq2amfnv4" path="res://volume_slider.tscn" id="1_ckfmq"]
+[ext_resource type="Script" path="res://pause_menu.gd" id="1_wb6kt"]
+
+[node name="PauseMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wb6kt")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.890196, 0.54902, 0.717647, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -142.5
+offset_top = -97.5
+offset_right = 142.5
+offset_bottom = 97.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="MasterLabel" type="Label" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_0142n")
+theme_override_font_sizes/font_size = 35
+text = "Master Volume"
+
+[node name="Master" parent="CenterContainer/VBoxContainer" instance=ExtResource("1_ckfmq")]
+layout_mode = 2
+bus_name = "Master"

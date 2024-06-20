@@ -63,3 +63,7 @@ func _on_player_laser(pos):
 	var laser = laser_scene.instantiate()
 	$Lasers.add_child(laser)
 	laser.position = pos
+
+func _input(event):
+	if event.is_action_pressed("options"):
+		get_tree().change_scene_to_file("res://pause_menu.tscn")
