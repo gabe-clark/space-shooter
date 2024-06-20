@@ -49,6 +49,7 @@ func _on_bonus_score_collision():
 	Global.score += 10
 
 func _on_meteor_collision():
+	print("Meteor collision")
 	health -= 1
 	get_tree().call_group("ui", "set_health", health)
 	if health == 0:
