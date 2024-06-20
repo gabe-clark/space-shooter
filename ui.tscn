@@ -3,7 +3,7 @@
 [ext_resource type="FontFile" uid="uid://ctxsuxx6nst1m" path="res://SpaceShooterRedux/Bonus/kenvector_future.ttf" id="1_uet52"]
 [ext_resource type="Script" path="res://ui.gd" id="1_wfdqp"]
 
-[node name="UI" type="CanvasLayer" groups=["ui"]]
+[node name="MainGameUI" type="CanvasLayer" groups=["ui"]]
 script = ExtResource("1_wfdqp")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]

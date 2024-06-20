@@ -10,7 +10,7 @@ func _ready():
 	var rng := RandomNumberGenerator.new()
 	# start position
 	var width = get_viewport_rect().size.x
-	var random_x = rng.randi_range(0, width)
+	var random_x = rng.randi_range(width/4, 3*width/4)
 	var random_y = rng.randi_range(-150, -50)
 	
 	position = Vector2(random_x, random_y)
@@ -26,3 +26,8 @@ func _process(delta):
 	# add movement to the meteors
 	position += Vector2(direction_x, 1.0) * speed * delta
 	rotation_degrees += rotation_speed * delta 
+
+func _on_body_entered(body):
+	collision.emit()
+	queue_free()
+

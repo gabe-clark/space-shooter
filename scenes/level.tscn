@@ -163,7 +163,6 @@ position = Vector2(0, 1)
 [node name="UI" parent="." instance=ExtResource("7_yabia")]
 
 [node name="BonusScoreTimer" type="Timer" parent="."]
-wait_time = 0.25
 autostart = true
 
 [node name="BonusScores" type="Node2D" parent="."]
