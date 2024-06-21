@@ -1,9 +1,18 @@
 extends Control
 
 func _ready():
-	print("Pause menu is ready")
+	get_tree().paused = false
 
 func _input(event):
-	print("input event registered in pause menu")
-	if event.is_action_pressed("options"):
-		get_tree().change_scene_to_file("res://scenes/level.tscn")
+	if event.is_action_pressed("options") and get_tree().paused == false:
+		pause()
+		$".".show()
+	elif event.is_action_pressed("options") and get_tree().paused:
+		$".".hide()
+		resume()
+
+func resume():
+	get_tree().paused = false
+	
+func pause():
+	get_tree().paused = true

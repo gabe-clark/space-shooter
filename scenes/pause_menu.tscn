@@ -1,17 +1,18 @@
 [gd_scene load_steps=4 format=3 uid="uid://bmxqx7aoscepf"]
 
-[ext_resource type="FontFile" uid="uid://ctxsuxx6nst1m" path="res://SpaceShooterRedux/Bonus/kenvector_future.ttf" id="1_0142n"]
-[ext_resource type="PackedScene" uid="uid://dpapxq2amfnv4" path="res://volume_slider.tscn" id="1_ckfmq"]
-[ext_resource type="Script" path="res://pause_menu.gd" id="1_wb6kt"]
+[ext_resource type="Script" path="res://pause_menu.gd" id="1_ul4wg"]
+[ext_resource type="FontFile" uid="uid://ctxsuxx6nst1m" path="res://SpaceShooterRedux/Bonus/kenvector_future.ttf" id="2_ecvtp"]
+[ext_resource type="PackedScene" uid="uid://dpapxq2amfnv4" path="res://volume_slider.tscn" id="3_4w7w2"]
 
 [node name="PauseMenu" type="Control"]
+process_mode = 3
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_wb6kt")
+script = ExtResource("1_ul4wg")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
@@ -29,9 +30,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -142.5
+offset_left = -187.5
 offset_top = -97.5
-offset_right = 142.5
+offset_right = 187.5
 offset_bottom = 97.5
 grow_horizontal = 2
 grow_vertical = 2
@@ -41,10 +42,10 @@ layout_mode = 2
 
 [node name="MasterLabel" type="Label" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("1_0142n")
+theme_override_fonts/font = ExtResource("2_ecvtp")
 theme_override_font_sizes/font_size = 35
 text = "Master Volume"
 
-[node name="Master" parent="CenterContainer/VBoxContainer" instance=ExtResource("1_ckfmq")]
+[node name="Master" parent="CenterContainer/VBoxContainer" instance=ExtResource("3_4w7w2")]
 layout_mode = 2
 bus_name = "Master"
