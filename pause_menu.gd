@@ -6,13 +6,19 @@ func _ready():
 func _input(event):
 	if event.is_action_pressed("options") and get_tree().paused == false:
 		pause()
-		$".".show()
+		show()
 	elif event.is_action_pressed("options") and get_tree().paused:
-		$".".hide()
+		hide()
 		resume()
 
 func resume():
 	get_tree().paused = false
+	$AnimationPlayer.play_backwards("blur")
 	
 func pause():
 	get_tree().paused = true
+	$AnimationPlayer.play()
+
+
+func _on_quit_pressed():
+	get_tree().quit()
