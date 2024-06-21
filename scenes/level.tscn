@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://d3rofqxou00eo"]
+[gd_scene load_steps=14 format=3 uid="uid://d3rofqxou00eo"]
 
 [ext_resource type="Texture2D" uid="uid://nmjfjdfqejpg" path="res://SpaceShooterRedux/Backgrounds/purple.png" id="1_47qws"]
 [ext_resource type="Script" path="res://scenes/level.gd" id="1_okj08"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dw1aaykdb8cga" path="res://SpaceShooterRedux/PNG/Effects/star2.png" id="5_6q0ru"]
 [ext_resource type="Texture2D" uid="uid://daitmnrxvetaj" path="res://SpaceShooterRedux/PNG/Effects/star3.png" id="6_01d7u"]
 [ext_resource type="PackedScene" uid="uid://cy4jhx54sfjdw" path="res://ui.tscn" id="7_yabia"]
+[ext_resource type="PackedScene" uid="uid://bmxqx7aoscepf" path="res://scenes/pause_menu.tscn" id="8_m0ae6"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_jidh2"]
 animations = [{
@@ -39,6 +40,20 @@ size = Vector2(1285, 20)
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_okj08")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("8_m0ae6")]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+offset_left = -653.149
+offset_top = -356.445
+offset_right = -653.149
+offset_bottom = -356.445
+grow_horizontal = 0
+grow_vertical = 0
+size_flags_vertical = 4
 
 [node name="Background" type="Sprite2D" parent="."]
 position = Vector2(626.851, 363.555)

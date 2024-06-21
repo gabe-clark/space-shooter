@@ -1,6 +1,5 @@
 extends Node2D
 
-# Step 1: Load the scence
 var meteor_scene: PackedScene = load("res://scenes/meteor.tscn")
 var bonus_score_scene: PackedScene = load("res://scenes/bonus_score.tscn")
 var laser_scene: PackedScene = load("res://scenes/laser.tscn")
@@ -9,7 +8,7 @@ var health: int = 5
 func _ready():
 	# Setup health UI
 	get_tree().call_group("ui", "set_health", health)
-
+	$CanvasLayer/PauseMenu.hide()
 	# stars
 	var size := get_viewport().get_visible_rect().size
 	var rng := RandomNumberGenerator.new()
@@ -63,3 +62,4 @@ func _on_player_laser(pos):
 	var laser = laser_scene.instantiate()
 	$Lasers.add_child(laser)
 	laser.position = pos
+
