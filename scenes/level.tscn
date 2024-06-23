@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://daitmnrxvetaj" path="res://SpaceShooterRedux/PNG/Effects/star3.png" id="6_01d7u"]
 [ext_resource type="PackedScene" uid="uid://cy4jhx54sfjdw" path="res://ui.tscn" id="7_yabia"]
 [ext_resource type="PackedScene" uid="uid://bmxqx7aoscepf" path="res://scenes/pause_menu.tscn" id="8_m0ae6"]
-[ext_resource type="AudioStream" uid="uid://250atgw0df72" path="res://music/Cyberpunk Moonlight Sonata.mp3" id="9_r4sis"]
+[ext_resource type="AudioStream" path="res://music/Cyberpunk Moonlight Sonata.mp3" id="9_r4sis"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_jidh2"]
 animations = [{
