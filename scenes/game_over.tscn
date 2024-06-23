@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://concere016xkx"]
+[gd_scene load_steps=5 format=3 uid="uid://concere016xkx"]
 
 [ext_resource type="Script" path="res://scenes/game_over.gd" id="1_3n4rv"]
 [ext_resource type="FontFile" uid="uid://ctxsuxx6nst1m" path="res://SpaceShooterRedux/Bonus/kenvector_future.ttf" id="1_iwmg8"]
 [ext_resource type="PackedScene" uid="uid://d3rofqxou00eo" path="res://scenes/level.tscn" id="2_uyfll"]
+[ext_resource type="AudioStream" uid="uid://cv3obubglcfb6" path="res://audio/sound_effects/GameOver.wav" id="4_7x670"]
 
 [node name="GameOver" type="Control"]
 layout_mode = 3
@@ -68,3 +69,8 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("1_iwmg8")
 theme_override_font_sizes/font_size = 15
 text = "Press space to start again"
+
+[node name="GameOverSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_7x670")
+pitch_scale = 0.75
+bus = &"Sound Effects"
