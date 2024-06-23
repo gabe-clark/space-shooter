@@ -7,7 +7,7 @@ func set_health(amount):
 	# Remove all children
 	for child in $MarginContainer2/HBoxContainer.get_children():
 		child.queue_free()
-	
+
 	# Create new children, amount is set by health
 	for i in amount:
 		var texture_rectangle = TextureRect.new()

@@ -13,3 +13,9 @@ export_presets.cfg
 .mono/
 data_*/
 mono_crash.*.json
+
+# Python stuff - necessary because the linter is a python module
+venv/
+.venv/
+env/
+.env/
