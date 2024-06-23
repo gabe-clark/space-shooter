@@ -45,9 +45,11 @@ one_shot = true
 
 [node name="LaserSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_l3ksw")
+bus = &"Sound Effects"
 
 [node name="DamageSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_l7aeh")
+bus = &"Sound Effects"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 enabled = false

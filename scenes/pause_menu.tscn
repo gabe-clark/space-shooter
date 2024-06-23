@@ -173,13 +173,36 @@ size_flags_vertical = 4
 
 [node name="MasterLabel" type="Label" parent="PanelContainer/VBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 4
 theme_override_fonts/font = ExtResource("2_ecvtp")
 theme_override_font_sizes/font_size = 35
 text = "Master Volume"
 
-[node name="Master" parent="PanelContainer/VBoxContainer" instance=ExtResource("3_4w7w2")]
+[node name="MasterSlider" parent="PanelContainer/VBoxContainer" instance=ExtResource("3_4w7w2")]
 layout_mode = 2
 bus_name = "Master"
+
+[node name="MusicLabel" type="Label" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_ecvtp")
+theme_override_font_sizes/font_size = 35
+text = "MUSIC VOLUME"
+
+[node name="MusicSlider" parent="PanelContainer/VBoxContainer" instance=ExtResource("3_4w7w2")]
+layout_mode = 2
+bus_name = "Music"
+
+[node name="SoundEffectsLabel" type="Label" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_ecvtp")
+theme_override_font_sizes/font_size = 35
+text = "SOUND EFFECTS"
+
+[node name="SoundEffectsSlider" parent="PanelContainer/VBoxContainer" instance=ExtResource("3_4w7w2")]
+layout_mode = 2
+bus_name = "Sound Effects"
 
 [node name="QUIT" type="Button" parent="PanelContainer/VBoxContainer"]
 layout_mode = 2
