@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scenes/player.gd" id="1_dc5xj"]
 [ext_resource type="Texture2D" uid="uid://cbbvbvron680j" path="res://SpaceShooterRedux/PNG/playerShip1_red.png" id="1_ol6p7"]
 [ext_resource type="AudioStream" uid="uid://w42eg5ouerg6" path="res://SpaceShooterRedux/Bonus/sfx_laser1.ogg" id="3_l3ksw"]
-[ext_resource type="AudioStream" uid="uid://bwir8uyftsm7" path="res://SpaceShooterRedux/Bonus/sfx_zap.ogg" id="4_l7aeh"]
+[ext_resource type="AudioStream" uid="uid://d0rdy3vecrg0f" path="res://audio/sound_effects/lowDown.mp3" id="4_5b387"]
 
 [sub_resource type="Gradient" id="Gradient_tnqxh"]
 
@@ -21,7 +21,7 @@ color = Color(0.294118, 1, 1, 1)
 color_ramp = SubResource("GradientTexture1D_mrnc1")
 
 [node name="Player" type="CharacterBody2D"]
-collision_mask = 6
+collision_mask = 22
 script = ExtResource("1_dc5xj")
 speed = 800
 
@@ -48,7 +48,8 @@ stream = ExtResource("3_l3ksw")
 bus = &"Sound Effects"
 
 [node name="DamageSound" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("4_l7aeh")
+stream = ExtResource("4_5b387")
+volume_db = 10.0
 bus = &"Sound Effects"
 
 [node name="Camera2D" type="Camera2D" parent="."]

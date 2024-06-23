@@ -9,9 +9,8 @@
 shader = ExtResource("2_1eegu")
 shader_parameter/lod = 0.0
 
-[sub_resource type="Animation" id="Animation_rc64r"]
-resource_name = "blur"
-length = 0.3
+[sub_resource type="Animation" id="Animation_gid1k"]
+length = 0.001
 tracks/0/type = "bezier"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -68,8 +67,9 @@ tracks/4/keys = {
 "times": PackedFloat32Array(0)
 }
 
-[sub_resource type="Animation" id="Animation_gid1k"]
-length = 0.001
+[sub_resource type="Animation" id="Animation_rc64r"]
+resource_name = "blur"
+length = 0.3
 tracks/0/type = "bezier"
 tracks/0/imported = false
 tracks/0/enabled = true

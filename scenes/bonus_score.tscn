@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://c326gudtaov07"]
+[gd_scene load_steps=5 format=3 uid="uid://c326gudtaov07"]
 
 [ext_resource type="Script" path="res://scenes/bonus_score.gd" id="1_2fu3v"]
 [ext_resource type="Texture2D" uid="uid://dhextew1juupi" path="res://SpaceShooterRedux/PNG/Power-ups/star_gold.png" id="1_g1pnc"]
+[ext_resource type="AudioStream" uid="uid://cl7w0um2emjcv" path="res://audio/sound_effects/powerUp2.mp3" id="3_k5ijm"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_m5sjl"]
 
@@ -14,5 +15,8 @@ texture = ExtResource("1_g1pnc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_m5sjl")
+
+[node name="BonusScoreSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_k5ijm")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
