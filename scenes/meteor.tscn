@@ -18,6 +18,7 @@ shape = SubResource("CircleShape2D_c550g")
 
 [node name="ExplosionSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("2_7qlnn")
+bus = &"Sound Effects"
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
