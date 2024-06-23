@@ -1,14 +1,15 @@
 extends CanvasLayer
 
+var time_elapsed: int = 0
+
 static var image = load("res://SpaceShooterRedux/PNG/UI/playerLife1_red.png")
 
-var time_elapsed: int = 0
 
 func set_health(amount):
 	# Remove all children
 	for child in $MarginContainer2/HBoxContainer.get_children():
 		child.queue_free()
-	
+
 	# Create new children, amount is set by health
 	for i in amount:
 		var texture_rectangle = TextureRect.new()
