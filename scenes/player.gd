@@ -1,12 +1,12 @@
 extends CharacterBody2D
 
+signal laser(pos)
+
 # Export exposes this variable in the Inspector (SUPER CONVENIENT!)
 @export var speed: int = 500 # set speed to int
 # @export var speed := 500 # set speed to int without having to be explicit
 var can_shoot: bool = true
 
-
-signal laser(pos)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
