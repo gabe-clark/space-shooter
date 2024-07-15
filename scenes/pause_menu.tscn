@@ -223,4 +223,7 @@ libraries = {
 "": SubResource("AnimationLibrary_ebb5p")
 }
 
+[connection signal="value_changed" from="PanelContainer/VBoxContainer/MasterSlider" to="." method="_on_master_slider_value_changed"]
+[connection signal="value_changed" from="PanelContainer/VBoxContainer/MusicSlider" to="." method="_on_music_slider_value_changed"]
+[connection signal="value_changed" from="PanelContainer/VBoxContainer/SoundEffectsSlider" to="." method="_on_sound_effects_slider_value_changed"]
 [connection signal="pressed" from="PanelContainer/VBoxContainer/QUIT" to="." method="_on_quit_pressed"]

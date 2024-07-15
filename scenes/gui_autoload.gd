@@ -19,16 +19,11 @@ var resolutions = {
 func _ready():
 	for i in gui_components:
 		var new_scene = load(i).instantiate()
-		print("Called instantiate for: ", new_scene)
 		add_child(new_scene)
-		new_scene._ready()
-		print("Added child: ", new_scene)
-		new_scene.update_button_values()
 		new_scene.hide()
 
 func _input(_event):
 	if Input.is_action_just_pressed("resolutions"):
-		print("Resolutions menu pressed")
 		var settings_menu = get_node("SettingsMenu")
 		settings_menu.visible = !settings_menu.visible
 		if settings_menu.visible:
