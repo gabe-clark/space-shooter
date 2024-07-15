@@ -12,7 +12,8 @@ var can_shoot: bool = true
 func _ready():
 	$LaserTimer.start()
 	position = Vector2(100, 500)
-
+	$PlayerImage.texture = PlayerVariables.ship_texture
+	$Particles.process_material.color = PlayerVariables.particles_hex_code
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
