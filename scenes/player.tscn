@@ -17,7 +17,7 @@ emission_sphere_radius = 13.16
 gravity = Vector3(2.08165e-12, 20, 2.08165e-12)
 scale_min = 16.1
 scale_max = 16.1
-color = Color(0.294118, 1, 1, 1)
+color = Color(0.927399, 0.851178, 1, 1)
 color_ramp = SubResource("GradientTexture1D_mrnc1")
 
 [node name="Player" type="CharacterBody2D"]
@@ -25,7 +25,7 @@ collision_mask = 22
 script = ExtResource("1_dc5xj")
 speed = 800
 
-[node name="0_4" type="GPUParticles2D" parent="."]
+[node name="Particles" type="GPUParticles2D" parent="."]
 position = Vector2(0, 40)
 process_material = SubResource("ParticleProcessMaterial_is28k")
 lifetime = 0.4
